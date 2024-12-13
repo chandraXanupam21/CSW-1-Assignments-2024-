@@ -1,0 +1,51 @@
+<html>  
+<head>  
+    
+    <title>Anupam Chandra 2341003015 ASS-3 Q1</title>  
+    <script  
+src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>  
+    <script>  
+      $(document).ready(function() {  
+           
+          $('#yellowButton').click(function() {  
+              $('body').css('background-color', 'yellow');  
+          });  
+  
+          $('#blueButton').click(function() {  
+              $('body').css('background-color', 'blue');  
+          });  
+  
+          $('#pinkButton').click(function() {  
+              $('body').css('background-color', 'pink');  
+          });  
+  
+          
+          $('#toggleDivsButton').click(function() {  
+              $('div').toggle();  
+          });  
+      });  
+  </script>  
+    <style>  
+        body {  
+            font-family: Arial, sans-serif;  
+            text-align: center;  
+            margin: 50px;  
+        }  
+        div {  
+            margin: 10px;  
+            padding: 20px;  
+            border: 1px solid black;  
+        }  
+    </style>  
+</head>  
+<body>  
+<div>1: This is the First Div.</div>  
+<div>2: This is the Second Div.</div>  
+<div>3: This is the Third Div.</div>  
+<h1>to Change Background Color and Toggle Divs</h1>  
+<button id="yellowButton">yellow</button>  
+<button id="pinkButton">pink</button>  
+<button id="blueButton">Blue</button>  
+<button id="toggleDivsButton"> to toggle Divs</button>  
+</body>  
+</html> 

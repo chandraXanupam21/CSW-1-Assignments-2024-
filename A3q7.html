@@ -1,0 +1,60 @@
+<html>
+<head>
+    <title>>Anupam Chandra 2341003015 ASS-3 Q7</title>
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: expand;
+}
+th, td {
+  padding: 8px;
+  text-align: left;
+}
+button{
+    border-radius: 41px;
+
+}
+
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+  $("#addRowButton").click(function() {
+    var name = prompt("Enter student's name:", "");
+    var age = prompt("Enter student's age:", "");
+    var city = prompt("Enter student's city:", "");
+    if (name != null && age != null && city != null) {
+      var row = "<tr><td>" + name + "</td><td>" + age + "</td><td>" + city + "</td></tr>";
+      $("#studentTable tbody").append(row);
+    }
+  });
+
+  $("#changeColorButton").click(function() {
+    $("#studentTable td").css("color", "red");
+  });
+});
+</script>
+
+</head>
+<body>
+
+<h2>Student Database</h2>
+
+<table id="studentTable">
+  <thead>
+    <tr>
+      <th>student's name</th>
+      <th>student's age</th>
+      <th>student's city</th>
+    </tr>
+  </thead>
+  <tbody>
+    </tbody>
+</table>
+
+<button id="addRowButton">Add a new Row</button>
+<button id="changeColorButton">Change the color of data</button>
+
+
+</body>
+</html>

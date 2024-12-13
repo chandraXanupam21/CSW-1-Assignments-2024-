@@ -1,0 +1,101 @@
+<html>
+<head>
+    <title>>Anupam Chandra 2341003015 ASS-3 Q10</title>
+    <style>
+        form {
+            max-width: 400px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        input[type="text"], input[type="email"], input[type="password"] {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        input[type="text"]:hover, input[type="email"]:hover, input[type="password"]:hover, button:hover {
+            border-color: #007bff;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 15px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .error {
+            color: red;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#signupForm").submit(function(event) {
+                event.preventDefault(); 
+                $(".error").remove(); 
+
+                let hasError = false;
+
+                $("#signupForm input").each(function() {
+                    if ($(this).val().trim() === "") {
+                        $(this).after("<span class='error'>This field is required.</span>");
+                        hasError = true;
+                    }
+                });
+
+                const email = $("#email").val();
+                const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (email && !emailPattern.test(email)) {
+                    $("#email").after("<span class='error'>Please enter a valid email address.</span>");
+                    hasError = true;
+                }
+
+                if (!hasError) {
+                    alert("Form submitted successfully!");
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+
+    <form id="signupForm">
+        <h2>Sign Up</h2>
+        
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" placeholder="Enter your username">
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email address">
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password">
+
+        <button type="submit">Sign Up</button>
+    </form>
+
+</body>
+</html>

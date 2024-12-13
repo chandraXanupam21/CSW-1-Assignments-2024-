@@ -1,0 +1,36 @@
+<html> 
+<head> 
+<title>>Anupam Chandra 2341003015 ASS-3 Q8</title> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> 
+<style> 
+#container { 
+margin: 20px; 
+padding: 10px; 
+border: 1px solid black; 
+        } 
+input, button { 
+margin: 5px; 
+        } 
+</style> 
+<script> 
+$(document).ready(function() { 
+$('#removeButton').click(function() { 
+var idToRemove = $('#idInput').val(); 
+$('#' + idToRemove).remove(); 
+$('#idInput').val(''); 
+            }); 
+        }); 
+</script> 
+</head> 
+<body> 
+<h2>Remove Element by ID</h2> 
+<div id="container"> 
+<p id="para1">This is the first paragraph.</p> 
+<p id="para2">This is the second paragraph.</p> 
+<p id="para3">This is the third paragraph.</p> 
+<p id="para4">This is the fourth paragraph.</p> 
+</div> 
+<input type="text" id="idInput" placeholder="Enter ID to remove"> 
+<button id="removeButton">Remove Element</button> 
+</body> 
+</html>
