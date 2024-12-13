@@ -1,0 +1,88 @@
+<html>
+<head>
+   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A4Q3 Anupam chandra 2341003015</title>
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 200px);
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .image-item img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            transition: border-radius 0.9s ease;
+        }
+
+        .thumbnail {
+            border-radius: 0%;
+        }
+
+        .toggle-input {
+            display: none;
+        }
+
+        .toggle-button {
+            padding: 10px 20px;
+            background-color: lightblue;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        .toggle-button:hover {
+            background-color: grey;
+        }
+
+        .toggle-input:checked ~ .image-grid .image-item img {
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Clicked the Button to change image shape</h1>
+
+        <label for="toggle" class="toggle-button">Change to Circular Border</label>
+        <input type="checkbox" id="toggle" class="toggle-input">
+
+        <div class="image-grid">
+            <div class="image-item">
+                <img src="kindle.jpg" alt="Image 1" class="thumbnail">
+            </div>
+            <div class="image-item">
+                <img src="remarkable.jpeg" alt="Image 2" class="thumbnail">
+            </div>
+            <div class="image-item">
+                <img src="kobo.jpeg" alt="Image 3" class="thumbnail">
+            </div>
+        </div>
+
+
+        
+    </div>
+
+</body>
+</html>
