@@ -1,0 +1,117 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A5Q2 Anupam chandra 2341003015  Student Table with Search and Hover Effect</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+
+        tr:hover {
+            background-color: #f2f2f2;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        #searchBar {
+            margin-bottom: 15px;
+            padding: 8px;
+            width: 100%;
+            max-width: 300px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2 style="text-align : center;">Student database</h2>
+    <p style="text-align : center;">Manage Students(edit and delete)</p>
+    
+    
+    <table id="studentTable" class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Semester</th>
+                <th>Registration Number</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Shyam</td>
+                <td>19</td>
+                <td>1</td>
+                <td>2341102022</td>
+                <td>
+                    <button class="btn btn-primary" onclick="editRow(this)">Edit</button>
+                    <button class="btn btn-danger" onclick="deleteRow(this)">Delete</button>
+                </td>
+            </tr>
+            <tr>
+                <td>Anupam</td>
+                <td>20</td>
+                <td>3</td>
+                <td>2341003015</td>
+                <td>
+                    <button class="btn btn-primary" onclick="editRow(this)">Edit</button>
+                    <button class="btn btn-danger" onclick="deleteRow(this)">Delete</button>
+                </td>
+            </tr>
+            <tr>
+                <td>Shreyash</td>
+                <td>17</td>
+                <td>1</td>
+                <td>234109999</td>
+                <td>
+                    <button class="btn btn-primary" onclick="editRow(this)">Edit</button>
+                    <button class="btn btn-danger" onclick="deleteRow(this)">Delete</button>
+                </td>
+            </tr>
+            
+                
+        </tbody>
+    </table>
+
+    <script>
+        $(document).ready(function() {
+            // Highlight table row on hover
+            $('#studentTable tbody tr').hover(
+                function() {
+                    $(this).css('background-color', '#f2f2f2');  // Highlight row on hover
+                },
+                function() {
+                    $(this).css('background-color', '');  // Reset background color
+                }
+            );
+
+            
+        });
+
+        // Example of edit and delete actions (you can define more logic as needed)
+        function editRow(button) {
+            alert("Edit clicked for: " + $(button).closest('tr').find('td:first').text());
+        }
+
+        function deleteRow(button) {
+            if (confirm("Are you sure you want to delete this row?")) {
+                $(button).closest('tr').remove();
+            }
+        }
+    </script>
+</body>
+</html>
