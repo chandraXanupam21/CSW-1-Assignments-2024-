@@ -1,0 +1,28 @@
+<html> 
+<head> 
+<title>>Anupam Chandra 2341003015 ASS-3 Q4</title> 
+<style> 
+#content { 
+padding: 10px; 
+border: 1px solid #ccc; 
+            } 
+</style> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> 
+<script> 
+$(document).ready(function() { 
+$('#fText').click(function() { 
+alert($('#myPara').text()); 
+            }); 
+$('#fHtml').click(function() { 
+alert($('#content').html()); 
+            }); 
+        }); 
+</script> 
+</head> 
+<body> 
+<p id="myPara">My First Para that shows you an alert</p> 
+<div id="content"><b>The Content about jQuery and you have to read this content.</b></div> 
+<button id="fText">Fetch Text</button> 
+<button id="fHtml">Fetch HTML</button> 
+</body> 
+</html>

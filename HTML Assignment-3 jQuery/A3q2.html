@@ -1,0 +1,40 @@
+<html> 
+<head> 
+    <title>>Anupam Chandra 2341003015 ASS-3 Q2</title> 
+    <style> 
+        #interactiveDiv { 
+            width: 200px; 
+            height: 100px; 
+            background-color: rgb(80, 185, 220); 
+            border: 10px solid rgb(22, 243, 176); 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            text-align: center; 
+            font-size: 18px; 
+            margin: 51px auto; 
+        } 
+    </style> 
+    <script 
+src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+    <script> 
+        $(document).ready(function() { 
+            $("#interactiveDiv").click(function() { 
+                $(this).text("Clicked!"); 
+            }); 
+            $("#interactiveDiv").dblclick(function() { 
+                $(this).css("background-color", "pink"); 
+            }); 
+            $("#interactiveDiv").mouseenter(function() { 
+                $(this).css("border-color", "green"); 
+            }); 
+            $("#interactiveDiv").mouseleave(function() { 
+                $(this).css("border-color", "blue"); 
+            }); 
+        }); 
+    </script> 
+</head> 
+<body> 
+<div id="interactiveDiv">you can click or Hover here</div> 
+</body> 
+</html>

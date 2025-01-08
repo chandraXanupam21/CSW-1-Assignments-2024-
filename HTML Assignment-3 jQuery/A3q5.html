@@ -1,0 +1,39 @@
+<html> 
+<head> 
+<title>>Anupam Chandra 2341003015 ASS-3 Q5</title> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> 
+<style> 
+ul { 
+list-style-type: none; 
+padding: 0; 
+        } 
+</style> 
+<script> 
+$(document).ready(function() { 
+$("#button1").click(function(){ 
+$("ul").append('<li>CSS</li>'); 
+        }); 
+$("#button2").click(function(){ 
+$("ul").prepend('<li>Introduction to Full Stack Development</li>'); 
+        }); 
+$("#button3").click(function(){ 
+$("ul").after('<p>Topics updated</p>'); 
+        }); 
+$("#button4").click(function(){ 
+$("ul").before('<h2>List of Topics Covered</h2>'); 
+        }); 
+    }); 
+</script> 
+</head> 
+<body> 
+<ul> 
+<li>Getting Started with Full Stack</li> 
+<li>HTML</li> 
+<li>CSS</li> 
+</ul> 
+<button id="button1">Append</button> 
+<button id="button2">Prepend</button> 
+<button id="button3">After</button> 
+<button id="button4">Before</button> 
+</body> 
+</html>

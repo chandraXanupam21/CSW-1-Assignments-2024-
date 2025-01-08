@@ -1,0 +1,54 @@
+<html>
+<head>
+<title>>Anupam Chandra 2341003015 ASS-3 Q6</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;
+ }
+
+.highlight{background-color:yellow;
+ }
+.dim{opacity:0.2;
+ }
+div{
+height:221px;width:321px;
+border:18px solid rgb(77, 76, 76);
+background-color:rgb(113, 204, 227);
+text-align:left;
+padding:140px;
+margin-left:331px;
+margin-top:210px;
+}
+
+button
+{
+width:200px;
+height:80px;
+margin-left:150px;
+margin-top:70px;
+margin-bottom:170px;
+}
+button{
+    border-radius: 30px;
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js">
+</script>
+<script>
+$(document).ready(function(){
+$("#btn1").click(function(){
+$("div").addClass("highlight");
+});
+
+$("#btn2").click(function(){
+$("div").addClass("dim");
+});  });
+</script>
+</head>
+<body>
+<div id="div1">
+<h2>Div Box</h2>
+</div>
+<button id="btn1"> Highlight Button(press here to highlight the box) </button>
+<button id="btn2">Dim Button(press here to dim the box) </button>
+</body>
+</html>

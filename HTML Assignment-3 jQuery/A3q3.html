@@ -1,0 +1,40 @@
+<html> 
+<head>
+<title>Anupam Chandra 2341003015 ASS3 Q3</title> 
+<style> 
+div { 
+  width: 100px; 
+  height: 100px; 
+  background-color: rgb(255, 0, 234); 
+  border: 1px solid black; 
+  transition: width 2s; 
+} 
+button{ 
+     
+    border-radius: 30px; 
+} 
+</style> 
+<script 
+src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script> 
+<script> 
+$(document).ready(function(){ 
+  $("#start").click(function(){ 
+    $("#div1").animate({ 
+      width: "400px" 
+    }, 2000); 
+  }); 
+  $("#stop").click(function(){ 
+    $("#div1").stop(); 
+  }); 
+}); 
+</script> 
+</head> 
+<body> 
+ 
+<div id="div1"></div> 
+ 
+<button id="start">Start</button> 
+<button id="stop">Stop</button> 
+ 
+</body> 
+</html>
